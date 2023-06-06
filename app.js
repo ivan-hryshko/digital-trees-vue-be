@@ -38,10 +38,12 @@ const authRouter = require('./routes/auth')
 const jobsRouter = require('./routes/jobs')
 const fieldsRouter = require('./routes/fields')
 const treesRouter = require('./routes/trees')
+const cellsRouter = require('./routes/cells')
 
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/fields', fieldsRouter)
 app.use('/api/v1/trees', treesRouter)
+app.use('/api/v1/cells', cellsRouter)
 app.use('/api/v1/jobs', authenticateUser, jobsRouter)
 
 app.use(notFoundMiddleware);
