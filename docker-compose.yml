@@ -1,0 +1,20 @@
+services:
+  # ditital-trees-mongodb:
+  #   image: 'mongo'
+  #   volumes:
+  #     - dt-db-data:/data/db
+  #   # environment:
+  #     # - MONGO_INITDB_ROOT_USERNAME=ivan
+  #     # - MONGO_INITDB_ROOT_PASSWORD=secret
+  #   env_file:
+  #     - ./env/mongo.env
+  ditital-trees-be:
+    build: ./
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/app
+      - dt-node-modules:/app/node_modules
+
+volumes:
+  dt-node-modules:
