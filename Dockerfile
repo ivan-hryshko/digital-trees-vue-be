@@ -10,5 +10,5 @@ COPY . .
 
 EXPOSE 5000
 
-CMD [ "node", "app.js" ]
-# CMD [ "npm", "run", "start" ]
+# CMD [ "node", "app.js" ]
+CMD [ "npm", "run", "dev" ]
